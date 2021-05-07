@@ -71,7 +71,6 @@ class App extends Component {
       </head>
       <body>
         ${this.state.html}
-
         <script type="text/javascript">
           ${this.state.js}
         </script>
@@ -115,8 +114,8 @@ class App extends Component {
                 scrollbarStyle: null,
                 lineWrapping: true,
               }}
-              onBeforeChange={(editor, data, html) => {
-                this.setState({ html }, () => this.syncUpdates());
+              onBeforeChange={(editor, data, css) => {
+                this.setState({ css }, () => this.syncUpdates());
               }}
             />
           </div>
